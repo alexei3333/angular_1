@@ -11,5 +11,5 @@ export class ParseformComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+   
 }
