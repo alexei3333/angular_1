@@ -1,13 +1,29 @@
 
+<div class="container">
+
+
 <header>
-   <h1> Test casper form parsing </h1>
+   <h1> Test bank form parsing </h1>
 </header>
 <main>
-<button (onclick)="parsePage()"> Parse second form</button>
+<!-- <input class="form-control" type="text" [(ngModel)]="url"/> -->
+<div class="form-group">
+     <span class="form-control"> {{url}} </span>
+</div>
+<div class="form-group">
 
 
+<button [disabled]="isLoading" class="btn btn-success" (click)="parsePage()"> Start parsing</button>
+
+<button *ngIf="isLoading" style="margin-left:10px" class="btn btn-danger" (click)="isLoading=false"> Break process</button>
+</div>
+<img *ngIf="isLoading" src="../assets/images/loading.gif"/>
+
+<h2> Output:</h2>
+<div class="highlight">
+<p> {{ outputText }} </p>
+</div>
 <router-outlet></router-outlet>
 </main>
-<footer>
 
-</footer>
+</div>
