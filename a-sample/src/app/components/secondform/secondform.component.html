@@ -1,1 +1,44 @@
-<p>secondform works!</p>
+<form #bankForm="ngForm" (ngSubmit)="onSubmit()">
+
+  <div class="form-group">
+    <label for="title">Bank</label>
+    <input type="text" class="form-control" id="title" required [(ngModel)]="modelBank.title" name="title"
+      #titleBox="ngModel">
+    <div [hidden]="titleBox.valid || titleBox.pristine" class="alert alert-danger">Bank name is required</div>
+    TODO: remove this: {{modelBank.title}}
+  </div>
+  <div class="form-group">
+    <label for="country">Country</label>
+    <select [(ngModel)]="modelBank.countryId" id="country" class="form-control" name="countryCmb">
+      <option *ngFor="let country of countries; trackBy:trackBy" [value]="country.id">{{country.name}}</option>
+    </select>
+    TODO: remove this: {{modelBank.countryId}}
+  </div>
+  <div class="form-group">
+    <input type="checkbox" [(ngModel)]="modelBank.isReady" name="isReadyChk" id="isReadyChk" />
+    <label for="isReadyChk">Ready</label>
+
+  </div>
+  <div class="form-group">
+    <input type="radio" [(ngModel)]="modelBank.statusWork" name="statusOpt" id="statusNew" value="0" />
+    <label for="statusNew">New</label>
+
+    <input type="radio" [(ngModel)]="modelBank.statusWork" name="statusOpt" id="statusProgress"
+      value="statusWorkEnum.InProgress" />
+    <label for="statusProgress">Progress</label>
+
+
+  </div>
+  <div class="form-group">
+    <input type="submit" class="btn btn-primary" value="Submit" [disabled]="!bankForm.form.valid" />
+  </div>
+
+
+
+</form>
+<div>
+  {{ debugInfo() }}
+</div>
+<div class="alert alert-success" [hidden]="!submitted">
+  The bank form is submitted
+</div>

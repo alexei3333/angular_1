@@ -2,7 +2,7 @@
   <div class="container">
     <p>Copyright {{ year }}</p>
     <div class="form-group">
-      <input [value]="year" class="form-control" #txt />
+      <input [value]="year" class="form-control col-md-1" #txt />
       <button class="btn btn-secondary" (click)="setNewYear(+txt.value)">Set year</button>
     </div>
   </div>

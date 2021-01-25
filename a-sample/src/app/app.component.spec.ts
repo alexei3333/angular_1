@@ -32,4 +32,16 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement;
     expect(compiled.querySelector('.content span').textContent).toContain('a-sample app is running!');
   });
+
+
+  it('should update the value of the input field', () => {
+    // const fixture = TestBed.createComponent(AppComponent);
+    // const input = fixture.nativeElement.querySelector('input');
+    // const event = createNewEvent('input');
+
+    // input.value = 'Red';
+    // input.dispatchEvent(event);
+
+    // expect(fixture.componentInstance.favoriteColorControl.value).toEqual('Red');
+  });
 });

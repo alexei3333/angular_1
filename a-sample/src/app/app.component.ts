@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
-  year: number = 2021;
+  title = 'Bench App';
+  year = 2021;
   constructor()
   {
 
