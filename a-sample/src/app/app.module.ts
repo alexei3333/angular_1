@@ -8,6 +8,7 @@ import { SecondformComponent } from './components/secondform/secondform.componen
 import { HomeComponent } from './components/home/home.component';
 import { NavMenuComponent } from './components/_layout/nav-menu/nav-menu.component';
 import { FooterComponent } from './components/_layout/footer/footer.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { FooterComponent } from './components/_layout/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

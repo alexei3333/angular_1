@@ -1,1 +1,9 @@
-<p>footer works!</p>
+<footer>
+  <div class="container">
+    <p>Copyright {{ year }}</p>
+    <div class="form-group">
+      <input [value]="year" class="form-control" #txt />
+      <button class="btn btn-secondary" (click)="setNewYear(+txt.value)">Set year</button>
+    </div>
+  </div>
+</footer>

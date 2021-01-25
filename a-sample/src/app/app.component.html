@@ -1,29 +1,8 @@
-
+<app-nav-menu></app-nav-menu>
 <div class="container">
-
-
-<header>
-   <h1> Test bank form parsing </h1>
-</header>
-<main>
-<!-- <input class="form-control" type="text" [(ngModel)]="url"/> -->
-<div class="form-group">
-     <span class="form-control"> {{url}} </span>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
 </div>
-<div class="form-group">
-
-
-<button [disabled]="isLoading" class="btn btn-success" (click)="parsePage()"> Start parsing</button>
-
-<button *ngIf="isLoading" style="margin-left:10px" class="btn btn-danger" (click)="isLoading=false"> Break process</button>
-</div>
-<img *ngIf="isLoading" src="../assets/images/loading.gif"/>
-
-<h2> Output:</h2>
-<div class="highlight">
-<p> {{ outputText }} </p>
-</div>
-<router-outlet></router-outlet>
-</main>
-
-</div>
+<div class="container">{{year}}</div>
+<app-footer (setYearEvent)="setNewYearParent($event)" [year]="2021"></app-footer>

@@ -6,29 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'a-sample';
-  outputText = "press the button to start parsing....";
-  url = "https://ib.psbank.ru/store/products/consumer-loan";
-  isLoading=false;
+
+  year: number = 2021;
   constructor()
   {
 
   }
-  private  appendLogText(txt:string):void
+  // tslint:disable-next-line: typedef
+  setNewYearParent(yearCur: number)
   {
-      
+     this.year = yearCur;
   }
 
-
-  parsePage()
-  {
-    //alert("working");
-    this.outputText=`start parsing ${this.url}....`;
-    this.isLoading=true;
-  }
-  breakParsing()
-  {
-    this.isLoading=false;
-  }
-  
 }
