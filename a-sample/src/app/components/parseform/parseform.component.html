@@ -1,9 +1,46 @@
 <div class="form-group">
   <label for="family"> family</label>
-  <input id="family" class="form-control" type="text" />
+  <input id="family" class="form-control" type="text" [formControl]="familyControl" />
+  TODO: remove this: {{familyControl.value}}
+</div>
+
+<div [formGroup]="personalDataGroup">
+  <div class="form-group">
+    <label for="title"> title</label>
+    <input id="title" class="form-control" type="text" formControlName="titleCtl" />
+
+  </div>
+  <div class="form-group">
+    <label for="name"> title</label>
+    <input id="name" class="form-control" type="text" formControlName="nameCtl" />
+
+  </div>
+  <div formGroupName="addressGroup">
+    <div class="form-group">
+      <label for="street"> title</label>
+      <input id="street" class="form-control" type="text" formControlName="streetCtl" />
+
+    </div>
+    <div class="form-group">
+      <label for="town"> title</label>
+      <input id="town" class="form-control" type="text" formControlName="townCtl" />
+    </div>
+  </div>
 
 </div>
 
+<div class="form-group">
+  <button class="btn btn-primary" (click)="sendForm()" [disabled]="!personalDataGroup.valid">Send form</button>
+  <button class="btn btn-secondary ml-4" (click)="resetForm()">Reset</button>
+  <button class="btn btn-secondary ml-4" (click)="patchForm()">Patch value</button>
+</div>
+<div>
+  {{ output }}
+</div>
+
+<div>
+  {{ JSON.stringify( personalDataGroup.value)}}
+</div>
 <!--
 <div class="form-group">
   <select class="form-control" [value]="4">

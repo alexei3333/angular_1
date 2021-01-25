@@ -9,6 +9,8 @@ import { HomeComponent } from './components/home/home.component';
 import { NavMenuComponent } from './components/_layout/nav-menu/nav-menu.component';
 import { FooterComponent } from './components/_layout/footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AutoformComponent } from './components/autoform/autoform.component';
+import { ChildOneComponent } from './components/sub/child-one/child-one.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SecondformComponent,
     HomeComponent,
     NavMenuComponent,
-    FooterComponent
+    FooterComponent,
+    AutoformComponent,
+    ChildOneComponent
   ],
   imports: [
     BrowserModule,
