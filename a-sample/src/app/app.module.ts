@@ -11,6 +11,8 @@ import { FooterComponent } from './components/_layout/footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AutoformComponent } from './components/autoform/autoform.component';
 import { ChildOneComponent } from './components/sub/child-one/child-one.component';
+import { ChildOneContainerComponent } from './components/sub/child-one-container/child-one-container.component';
+import { ContainerHolderComponent } from './components/container-holder/container-holder.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ChildOneComponent } from './components/sub/child-one/child-one.componen
     NavMenuComponent,
     FooterComponent,
     AutoformComponent,
-    ChildOneComponent
+    ChildOneComponent,
+    ChildOneContainerComponent,
+    ContainerHolderComponent
   ],
   imports: [
     BrowserModule,
