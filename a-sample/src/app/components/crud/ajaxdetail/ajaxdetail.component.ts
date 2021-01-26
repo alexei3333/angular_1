@@ -17,10 +17,10 @@ import { AjaxListService } from 'src/app/services/ajax-list.service';
 })
 export class AjaxdetailComponent implements OnInit, OnChanges {
   id: number = 0;
-  constructor(
-    private service: AjaxListService,
-    private route: ActivatedRoute
-  ) {}
+  constructor(private service: AjaxListService, private route: ActivatedRoute) {
+    //  this.id = activateRoute.snapshot.params['id'];
+    //  this.subscription = activateRoute.params.subscribe(params=>this.id=params['id']);
+  }
 
   ngOnInit(): void {
     this.route.paramMap

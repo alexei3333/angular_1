@@ -17,6 +17,7 @@ import { AjaxlistComponent } from './components/crud/ajaxlist/ajaxlist.component
 import { AjaxdetailComponent } from './components/crud/ajaxdetail/ajaxdetail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AjaxDetailItemComponent } from './components/crud/ajax-detail-item/ajax-detail-item.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { AjaxDetailItemComponent } from './components/crud/ajax-detail-item/ajax
     AjaxlistComponent,
     AjaxdetailComponent,
     AjaxDetailItemComponent,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,

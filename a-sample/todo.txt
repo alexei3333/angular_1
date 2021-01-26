@@ -1,0 +1,6 @@
+directives
+mergeMap etc
+error handling rxjs
+test for ajax services
+external templates
+https://angular.io/guide/attribute-directives
