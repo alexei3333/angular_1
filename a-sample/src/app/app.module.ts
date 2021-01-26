@@ -15,6 +15,8 @@ import { ChildOneContainerComponent } from './components/sub/child-one-container
 import { ContainerHolderComponent } from './components/container-holder/container-holder.component';
 import { AjaxlistComponent } from './components/crud/ajaxlist/ajaxlist.component';
 import { AjaxdetailComponent } from './components/crud/ajaxdetail/ajaxdetail.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AjaxDetailItemComponent } from './components/crud/ajax-detail-item/ajax-detail-item.component';
 
 @NgModule({
   declarations: [
@@ -29,15 +31,17 @@ import { AjaxdetailComponent } from './components/crud/ajaxdetail/ajaxdetail.com
     ChildOneContainerComponent,
     ContainerHolderComponent,
     AjaxlistComponent,
-    AjaxdetailComponent
+    AjaxdetailComponent,
+    AjaxDetailItemComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
