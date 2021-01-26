@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Server } from 'http';
 import { AjaxListService } from '../../../services/ajax-list.service';
 
 @Component({
@@ -11,4 +12,7 @@ export class AjaxlistComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {}
   ngOnDestroy(): void {}
+  get baseUrl(): string {
+    return this.service.baseUrl;
+  }
 }
