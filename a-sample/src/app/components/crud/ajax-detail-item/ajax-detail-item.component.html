@@ -1,4 +1,5 @@
 <div class="col-md-4">
-  <img [src]="picturePath" alt="{{id}}" />
-  <p *ngIf="decorNameTruncated">{{decorNameTruncated}}</p>
+  <p>Title</p>
+  <img [src]="item.picturePath + '?w=220&h=225&mode=crop&quality=75'" alt="{{item.id}}" />
+  <p *ngIf="item.decorNameTruncated">{{item.decorNameTruncated}}</p>
 </div>

@@ -6,6 +6,7 @@ import { apiVitrinaLw } from '../helpers/constants';
 import { HttpClient } from '@angular/common/http';
 import { objectToQuery } from '../helpers/common';
 import {
+  IFetchVitrinaResponse,
   IVitrinaItemLw,
   IVitrinaTabbedCriteria,
 } from '../interfaces/vitrina-t.interfaces';
@@ -22,11 +23,11 @@ export class AjaxListService {
 
   getVitrinaItems(
     criteria: IVitrinaTabbedCriteria
-  ): Observable<IVitrinaItemLw> {
+  ): Observable<IFetchVitrinaResponse> {
     const query = objectToQuery(criteria);
     const fetchUrl = this.apiVitrinaLw + query;
     console.log(fetchUrl);
-    const items$ = this.http.get<IVitrinaItemLw>(fetchUrl);
+    const items$ = this.http.get<IFetchVitrinaResponse>(fetchUrl);
     return items$;
   }
 }

@@ -1,6 +1,11 @@
 <p>Items from {{ baseUrl}}</p>
 
 <div class="container">
-
+  <div class="col-md-4">
+    <button class="btn btn-danger" (click)="searchItems()" [style.font-size.px]="10">Search</button>
+    <button class="btn" [ngClass]="{'btn-success':true}" (click)="displaySubscriptionInfo()"
+      [style.font-size.px]="10">Subscription info</button>
+    <span class="gray">Found {{items.length}} items</span>
+  </div>
   <app-ajax-detail-item *ngFor="let item of items" [item]="item"></app-ajax-detail-item>
 </div>
