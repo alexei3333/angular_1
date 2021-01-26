@@ -1,1 +1,6 @@
 <p>Items from {{ baseUrl}}</p>
+
+<div class="container">
+
+  <app-ajax-detail-item *ngFor="let item of items" [item]="item"></app-ajax-detail-item>
+</div>

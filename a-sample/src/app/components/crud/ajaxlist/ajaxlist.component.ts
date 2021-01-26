@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Server } from 'http';
 import { AjaxListService } from '../../../services/ajax-list.service';
+import { IVitrinaItemLw } from '../../../interfaces/vitrina-t.interfaces';
 
 @Component({
   selector: 'app-ajaxlist',
@@ -8,7 +8,10 @@ import { AjaxListService } from '../../../services/ajax-list.service';
   styleUrls: ['./ajaxlist.component.scss'],
 })
 export class AjaxlistComponent implements OnInit, OnDestroy {
-  constructor(private service: AjaxListService) {}
+  items: IVitrinaItemLw[];
+  constructor(private service: AjaxListService) {
+    this.items = [];
+  }
 
   ngOnInit(): void {}
   ngOnDestroy(): void {}
