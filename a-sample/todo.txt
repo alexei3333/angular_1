@@ -4,3 +4,4 @@ error handling rxjs
 test for ajax services
 external templates
 https://angular.io/guide/attribute-directives
+https://medium.com/angular-in-depth/practical-rxjs-in-the-wild-requests-with-concatmap-vs-mergemap-vs-forkjoin-11e5b2efe293

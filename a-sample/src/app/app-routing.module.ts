@@ -14,6 +14,7 @@ const routes: Routes = [
   { path: 'secondform', component: SecondformComponent },
   { path: 'autoform', component: AutoformComponent },
   { path: 'containers', component: ContainerHolderComponent },
+  { path: 'redir', redirectTo:'ajaxlist',pathMatch:'true' },
   { path: 'ajaxlist', component: AjaxlistComponent },
   { path: 'ajaxdetail/:id', component: AjaxdetailComponent },
   { path: '**', redirectTo: '' },
