@@ -13,8 +13,7 @@ export class ChildOneContainerComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  // get hasChild()
-  // {
-
-  // }
+  get hasChild(): boolean {
+    return this.child !== null;
+  }
 }

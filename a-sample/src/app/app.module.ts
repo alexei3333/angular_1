@@ -13,6 +13,8 @@ import { AutoformComponent } from './components/autoform/autoform.component';
 import { ChildOneComponent } from './components/sub/child-one/child-one.component';
 import { ChildOneContainerComponent } from './components/sub/child-one-container/child-one-container.component';
 import { ContainerHolderComponent } from './components/container-holder/container-holder.component';
+import { AjaxlistComponent } from './components/crud/ajaxlist/ajaxlist.component';
+import { AjaxdetailComponent } from './components/crud/ajaxdetail/ajaxdetail.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { ContainerHolderComponent } from './components/container-holder/containe
     AutoformComponent,
     ChildOneComponent,
     ChildOneContainerComponent,
-    ContainerHolderComponent
+    ContainerHolderComponent,
+    AjaxlistComponent,
+    AjaxdetailComponent
   ],
   imports: [
     BrowserModule,
