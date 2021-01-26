@@ -1,6 +1,12 @@
 <p>child-one-container works!</p>
 <p>Has child: {{ hasChild}}</p>
+<p>Has footer: {{ hasFooter}}</p>
+
+<p>Test content: {{ pTestContent}}</p>
+<hr />
 <ng-content>
 
 </ng-content>
-<p>finish child-one-container</p>
+<p #ptest>finish child-one-container</p>
+
+<app-footer></app-footer>
